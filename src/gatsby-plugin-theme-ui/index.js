@@ -1,17 +1,17 @@
-/*
- * Want to change your theme colors?
- * Try uncommenting the color overrides below
- * to go from default purple to a blue theme
- */
+import merge from "deepmerge"
+import defaultTheme from "gatsby-theme-blog/src/gatsby-plugin-theme-ui/index"
 
-const darkBlue = `#007acc`
-const lightBlue = `#66E0FF`
-const blueGray = `#282c35`
-
-export default {
-    colors: {
-        text: blueGray,
-        primary: darkBlue,
-        heading: blueGray,
+export default merge(defaultTheme, {
+  colors: {
+    background: "ghostwhite",
+    text: "black",
+    primary: "mediumvioletred",
+    modes: {
+      dark: {
+        background: "indigo",
+        text: "ghostwhite",
+        primary: "gold",
+      },
     },
-}
+  },
+})
